@@ -321,7 +321,22 @@
         }
 
         echo "<h3>Hasil:</h3>";
+        
         echo "<p>$result</p>";
+
+        // Menyimpan hasil ke dalam file jika tindakan adalah Enkripsi
+        if ($action == "encrypt") {
+            $filename = "ciphertext.txt";
+            $file = fopen($filename, "w");
+            
+            if ($file) {
+                fwrite($file, $result);
+                fclose($file);
+                echo "<p>Ciphertext to file <a href='$filename' download>Ciphertext.txt</a>.</p>";
+            } else {
+                echo "<p>Gagal menyimpan ciphertext ke dalam file.</p>";
+            }
+        }
     }
     ?>
 </body>
