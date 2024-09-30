@@ -1,0 +1,22 @@
+//  Penjelasan Singkat Cipher
+Vigenere Cipher: Menggunakan kunci untuk melakukan pergeseran karakter berdasarkan huruf dalam kunci.
+Auto-Key Vigenere Cipher: Menggunakan plaintext sebagai bagian dari kunci selama proses enkripsi.
+Playfair Cipher: Membuat matriks 5x5 dari kunci dan mengenkripsi teks dengan pasangan huruf.
+Hill Cipher: Menggunakan matriks matematika untuk mengenkripsi teks. Kunci harus dimasukkan sebagai 4 angka yang dipisahkan oleh koma (contoh: 3,3,2,5).
+Super Enkripsi: Kombinasi dari Vigenere Cipher dan Transposisi Kolom.
+
+// Struktur Program
+File Utama:
+enkripsi.php: File ini berisi semua logika untuk antarmuka pengguna dan pemrosesan enkripsi/dekripsi
+ menggunakan metode cipher yang dipilih.
+
+Fungsi Utama:
+vigenere_cipher(): Mengimplementasikan enkripsi dan dekripsi Vigenere Cipher.
+auto_key_vigenere_cipher(): Implementasi Auto-Key Vigenere Cipher.
+playfair_cipher(): Implementasi Playfair Cipher dengan pasangan huruf dan matriks 5x5.
+hill_cipher(): Mengimplementasikan Hill Cipher untuk teks berukuran kelipatan 2.
+transposition_cipher(): Mengimplementasikan cipher transposisi kolom untuk Super Enkripsi.
+
+// Catatan Tambahan
+Untuk Hill Cipher, kunci harus berupa matriks 2x2 yang terdiri dari 4 angka yang dipisahkan dengan koma (misalnya: 3,3,2,5).
+Jika hasil tidak sesuai ekspektasi atau ada kesalahan, silakan cek format masukan kunci atau teks yang diproses.

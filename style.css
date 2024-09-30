@@ -1,0 +1,119 @@
+/* 
+Gaya umum untuk body:
+Menerapkan font yang bersih, warna latar belakang yang terang, 
+dan tata letak yang terpusat untuk pengalaman pengguna yang nyaman.
+*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.3s ease;
+}
+
+/* 
+Gaya untuk kontainer utama:
+Memberikan tampilan seperti kartu dengan bayangan lembut dan sudut yang melengkung.
+*/
+.container {
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    width: 450px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Gaya untuk judul */
+h1 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 600px;
+    font-weight: 600;
+}
+
+/* Gaya untuk label: Mengatur teks label agar rapi dan mudah dibaca */
+label {
+    font-size: 14px;
+    color: #34495e;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+/* Gaya untuk input dan dropdown select */
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* 
+Efek ketika input atau select sedang aktif:
+Menambahkan highlight biru untuk memberikan umpan balik visual yang baik.
+*/
+input[type="text"]:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Gaya untuk tombol proses */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efek hover pada tombol proses */
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Gaya untuk hasil */
+h3 {
+    color: #27ae60;
+    margin-top: 500px;
+    font-weight: 600; 
+}
+
+p {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 500px;
+    font-size: 16px;
+    word-wrap: break-word;
+    border: 1px solid #bdc3c7;
+}
+
+/* Animasi hover untuk kontainer */
+.container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Gaya responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+}
