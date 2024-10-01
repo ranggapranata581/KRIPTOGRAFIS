@@ -20,3 +20,178 @@ transposition_cipher(): Mengimplementasikan cipher transposisi kolom untuk Super
 // Catatan Tambahan
 Untuk Hill Cipher, kunci harus berupa matriks 2x2 yang terdiri dari 4 angka yang dipisahkan dengan koma (misalnya: 3,3,2,5).
 Jika hasil tidak sesuai ekspektasi atau ada kesalahan, silakan cek format masukan kunci atau teks yang diproses.
+
+cara jalan pemprograman
+1. Vigenere Cipher
+2 isi dari vigenere cipher plaintext berisi  KRIPTOGRAFIS dan kuncinya abc, Tindakan yang dilakukan adalah enskripsi sehingga 
+akan mendapatkan hasil huruf (KSKPUQGSCFJU). Huruf tersebut didapatkan dengan rumus Vigenere Cipher. 
+Di mana setiap huruf diubah menjadi indeks (A=0, B=1, ..., Z=25), kemudian ditambahkan dengan indeks huruf dari kunci.
+
+2. Auti-Key Vigenere
+adalah program endkripsi dari Auto-Key Vigenere Cipher dimana plaintext berisi kamu, kunci berisi key. Maka mendapatkan hasil chipertext “UEKE” ,
+dan juga melakukan penyimpanan chipertext kedalam file.
+Di mana setiap huruf diubah menjadi indeks (A=0, B=1, ..., Z=25), kemudian ditambahkan dengan indeks huruf dari kunci.
+Deskripsi Auto-Key Vigenere Cipher dimana chiptertext yang didapatkan akan dikembalikan. Chipertekxt “UEKE” akan dideskripsikan menjadi “kamu” 
+dengan menggunak,n Auto-Key Vigenere Cipher dan kunci awal "key". 
+
+3. Playfair Cipher
+Playfair Cipher menggunakan matriks 5x5 dengan menggabungkan I dan J. Program dapat mengenkripsi dan mendekripsi dengan benar.
+merupakan hasil dari plaintext "kriptografis" menjadi ciphertext "GUKOYTMWFLHY" dengan menggunakan kunci "abc". Proses ini menunjukkan bagaimana pasangan huruf diproses melalui tabel kunci untuk menghasilkan ciphertext yang lebih kompleks dan aman. Program juga dapat melakukan penyimpanan chipertext kedalam bentuk file.
+
+Buat Tabel Kunci:
+•	Kunci yang diberikan adalah "abc".
+•	Buat tabel 5x5 dengan huruf dari kunci, kemudian tambahkan huruf yang belum digunakan, menggabungkan "i" dan "j".
+Tabel Kunci:
+a b c d e
+f g h i/j k
+l m n o p
+q r s t u
+v w x y z
+Persiapkan Plaintext:
+•	Plaintext yang akan dienkripsi adalah "kriptografi".
+•	Bagi plaintext menjadi pasangan huruf. Jika ada pasangan huruf yang sama, tambahkan huruf pengganti (misalnya "x").
+•	Plaintext dibagi menjadi: "kr", "ip", "to", "gr", "af", "is".
+Enkripsi Pasangan Huruf:
+Aturan:
+•	Jika kedua huruf berada di baris yang sama, ganti dengan huruf berikutnya di baris yang sama.
+•	Jika kedua huruf berada di kolom yang sama, ganti dengan huruf berikutnya di kolom yang sama.
+•	Jika huruf membentuk persegi (berbeda baris dan kolom), ganti dengan huruf yang berada di sudut yang berlawanan.
+Enkripsi pasangan:
+•	"kr":
+•	k (baris 2, kolom 5) dan r (baris 4, kolom 2) → "GU" (ganti dengan huruf sudut)
+•	"ip":
+•	i (baris 2, kolom 4) dan p (baris 3, kolom 5) → "KO"
+•	"to":
+•	t (baris 4, kolom 4) dan o (baris 3, kolom 3) → "YT"
+•	"gr":
+•	g (baris 2, kolom 2) dan r (baris 4, kolom 2) → "MW"
+•	"af":
+•	a (baris 1, kolom 1) dan f (baris 2, kolom 1) → "FL"
+•	"is":
+•	i (baris 2, kolom 4) dan s (baris 4, kolom 4) → "HY"
+Hasil Enkripsi:
+•	Menggabungkan hasil enkripsi dari pasangan huruf:
+•	Hasil akhir: "GUKOYTMWFLHY"
+
+hasil deskripsi
+Dengan menggunakan metode Playfair cipher, ciphertext "GUKOYTMWFLHY" dapat didekripsi kembali menjadi plaintext "kriptografis" menggunakan kunci "abc". Proses ini menunjukkan bagaimana pasangan huruf diproses melalui tabel kunci untuk mengembalikan pesan asli.
+Buat Tabel Kunci:
+•	Kunci yang diberikan adalah "abc".
+•	Buat tabel 5x5 dengan huruf dari kunci, kemudian tambahkan huruf yang belum digunakan (menggabungkan "i" dan "j").
+Tabel Kunci:
+a b c d e
+f g h i/j k
+l m n o p
+q r s t u
+v w x y z
+Persiapkan Ciphertext:
+•	Ciphertext yang akan didekripsi adalah "GUKOYTMWFLHY".
+•	Bagi ciphertext menjadi pasangan huruf: "GU", "KO", "YT", "MW", "FL", "HY".
+Dekripsi Pasangan Huruf:
+•	Aturan:
+•	Jika kedua huruf berada di baris yang sama, ganti dengan huruf sebelumnya di baris yang sama.
+•	Jika kedua huruf berada di kolom yang sama, ganti dengan huruf sebelumnya di kolom yang sama.
+•	Jika huruf membentuk persegi (berbeda baris dan kolom), ganti dengan huruf yang berada di sudut yang berlawanan.
+Dekripsi pasangan:
+•	"GU":
+•	g (baris 2, kolom 2) dan u (baris 4, kolom 5) → "kr" (sudut berlawanan)
+•	"KO":
+•	k (baris 2, kolom 5) dan o (baris 3, kolom 4) → "ip" (sudut berlawanan)
+•	"YT":
+•	y (baris 5, kolom 4) dan t (baris 4, kolom 4) → "to" (kolom yang sama)
+•	"MW":
+•	m (baris 3, kolom 2) dan w (baris 5, kolom 3) → "gr" (sudut berlawanan)
+•	"FL":
+•	f (baris 2, kolom 1) dan l (baris 3, kolom 1) → "af" (kolom yang sama)
+•	"HY":
+•	h (baris 2, kolom 3) dan y (baris 5, kolom 4) → "is" (sudut berlawanan)
+Hasil Dekripsi:
+•	Menggabungkan hasil dekripsi dari pasangan huruf:
+•	Hasil akhir: "kriptografi"
+
+4. Hill Cipher
+9 menunjukkan bahwa implementasi Hill Cipher dalam program tersebut berfungsi dengan benar untuk input yang diberikan. Program berhasil mengenkripsi plaintext "kriptografis" menjadi ciphertext "DBRNVERTPZAC" menggunakan kunci "3,3,2,5". Program dapat menyimpan hasil endkripsi kedalam bentuk file.
+Persiapan kunci:
+Kunci diberikan sebagai 3,3,2,5. Ini akan membentuk matriks kunci 2x2:
+[3 3]
+[2 5]
+Persiapan plaintext:
+•	Plaintext: "kriptografis"
+•	Ubah menjadi huruf kapital: "KRIPTOGRAFIS"
+•	Karena Hill Cipher bekerja dengan blok, kita akan memproses 2 huruf sekaligus.
+Konversi huruf ke angka (A=0, B=1, ..., Z=25):
+K=10, R=17, I=8, P=15, T=19, O=14, G=6, R=17, A=0, F=5, I=8, S=18
+Proses enkripsi setiap pasangan huruf: KR: [10, 17]
+[3 3] [10] = [310 + 317] = [81] = [3] = D
+[2 5] [17] [210 + 517] [105] [1] B b) IP: [8, 15]
+[3 3] [8] = [38 + 315] = [69] = [17] = R
+[2 5] [15] [28 + 515] [91] [13] N c) TO: [19, 14]
+[3 3] [19] = [319 + 314] = [99] = [21] = V
+[2 5] [14] [219 + 514] [108] [4] E d) GR: [6, 17]
+[3 3] [6] = [36 + 317] = [69] = [17] = R
+[2 5] [17] [26 + 517] [97] [19] T e) AF: [0, 5]
+[3 3] [0] = [30 + 35] = [15] = [15] = P
+[2 5] [5] [20 + 55] [25] [25] Z f) IS: [8, 18]
+[3 3] [8] = [38 + 318] = [78] = [0] = A
+[2 5] [18] [28 + 518] [106] [2] C
+Hasil enkripsi:
+DBRNVERTPZAC
+Hasil yang ditampilkan pada gambar adalah "DBRNVERTPZAC", yang sesuai dengan perhitungan program yang kami buat.
+
+Hasil Deskripsi :
+Menunjukan proses dekripsi Hill Cipher dilakukan dengan memanfaatkan matriks kunci yang diinverskan. Setiap blok plaintext berukuran 4 karakter (sesuai dengan ukuran matriks kunci 4x4) akan dikalikan dengan matriks invers untuk mendapatkan blok ciphertext yang terdekrip. Dalam kasus ini, plaintext "DBRNVERTPZAC" dibagi menjadi blok-blok berukuran 4 karakter, kemudian setiap blok dikalikan dengan matriks invers dari kunci "3,3,2,5". Setelah semua blok terdekrip, hasilnya digabungkan menjadi teks yang terbaca, yaitu "KRIPTOGRAFIS"
+Algoritma Hill Cipher menggunakan matriks kunci untuk mengenkripsi dan mendekripsi teks. Dalam kasus ini, kunci "3,3,2,5" membentuk matriks 2x2:
+| 3  3 |
+| 2  5 |
+•	Perkalian matriks:
+| 5 23 |   | 3 |   | 5*3 + 23*1 |   | 15 + 23 |   | 38 |   | 12 |
+| 24 3 | x | 1 | = | 24*3 + 3*1 | = | 72 + 3  | = | 75 | = | 23 |
+•	[12, 23] dikonversi menjadi "MC" (M=12, C=23).
+Langkah ini diulang untuk setiap blok.
+•	Menggabungkan Hasil Dekripsi: Hasil dekripsi dari setiap blok digabungkan untuk membentuk teks terdekripsi.
+Berdasarkan perhitungan tersebut, dekripsi dari "DBRNVERTPZAC" dengan kunci "3,3,2,5" menghasilkan "KRIPTOGRAFIS".
+
+ 5. Super Endkripsi
+Menunjukan proses enkripsi Super Enkripsi (Vigenère + Transposisi Kolom) dengan plaintext "hello" dan kunci "key", yang menghasilkan ciphertext "ISRVJX".
+•	Enkripsi menggunakan Vigenère:
+Plaintext: "hello"
+Kunci: "key"
+Tabel Vigenère:
+H E L L O
+K E Y K E
+--------
+I S R V J
+- Ciphertext dari Vigenère: "ISRVJ"
+•	Transposisi Kolom:
+Ciphertext dari Vigenère: "ISRVJ"
+Kunci: "key" (panjang kunci = 3)
+Proses transposisi:
+I S R
+V J
+•	Ciphertext hasil transposisi: "ISRVJX"
+Jadi, hasil akhir dari Enkripsi Super Enkripsi (Vigenère + Transposisi Kolom) dengan
+plaintext "hello" dan kunci "key" adalah "ISRVJX".
+Penjelasan:
+•	Pertama, plaintext "hello" dienkripsi menggunakan algoritma Vigenère dengan kunci "key". Ini menghasilkan ciphertext "ISRVJ".
+•	Selanjutnya, ciphertext "ISRVJ" ditraposisikan menggunakan kunci "key" dengan panjang kunci 3. Hasil akhirnya adalah "ISRVJX".
+Jadi, dapat disimpulkan bahwa hasil enkripsi Super Enkripsi (Vigenère + Transposisi Kolom) dengan plaintext "hello" dan kunci "key" adalah "ISRVJX".
+
+Hasil Deskripsi:
+Menunjukan bagaimana dekripsi Vigenere dan transposisi kolom menghasilkan "HELLO" dari ciphertext "RIJVS", dengan kunci "key"
+Dekripsi Vigenere:
+Algoritma Vigenere menggunakan kunci untuk mendekripsi teks. Kunci "key" akan diulang untuk menyesuaikan panjang teks ciphertext "RIJVS". Karena kunci "key" lebih pendek dari ciphertext, kunci akan diulang: "keyke".
+Proses dekripsi Vigenere untuk setiap karakter dilakukan sebagai berikut:
+•	R: Cari posisi 'R' dalam alfabet (urutan ke-18).
+•	k: Cari posisi 'k' dalam alfabet (urutan ke-11).
+•	Hitung selisih: 18 - 11 = 7.
+•	Cari karakter: Karakter ke-7 dalam alfabet adalah 'H'.
+Langkah ini diulang untuk setiap karakter:
+•	I (posisi 9) - e (posisi 5): 9 - 5 = 4 => 'E'
+•	J (posisi 10) - y (posisi 25): 10 - 25 = -15 => Tambahkan 26 (jumlah huruf dalam alfabet) untuk mendapatkan 11 => 'L'
+•	V (posisi 22) - k (posisi 11): 22 - 11 = 11 => 'L'
+•	S (posisi 19) - e (posisi 5): 19 - 5 = 14 => 'O'
+Hasil dekripsi Vigenere adalah "HELLO".
+
+
+
+
